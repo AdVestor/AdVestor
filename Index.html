@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AdVestor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- SIGNUP -->
+  <div class="page active" id="signup">
+    <h2>Signup</h2>
+    <input id="sname" placeholder="Full Name">
+    <input id="sphone" placeholder="Phone Number">
+    <button onclick="signup()">Create Account</button>
+  </div>
+
+  <!-- HEADER -->
+  <div class="header" id="mainHeader">
+    <h2>AdVestor</h2>
+
+    <p>Balance: Rs <span id="balance">0</span></p>
+
+    <!-- WHATSAPP CHANNEL (NEW) -->
+    <a class="whatsapp-link"
+       href="https://whatsapp.com/channel/0029VbCPuM34Crfag241e21T"
+       target="_blank">
+       WhatsApp Channel
+    </a>
+
+    <span class="logout" onclick="logout()">Logout</span>
+  </div>
+
+  <!-- HOME -->
+  <div class="page" id="home">
+    <h3>Plans</h3>
+    <div id="plans"></div>
+  </div>
+
+  <!-- ADS -->
+  <div class="page" id="ads">
+    <h3>Watch Ads</h3>
+    <p>Ads Today: <span id="watched">0</span>/10</p>
+    <p id="timer"></p>
+    <button id="watchBtn" onclick="watchAd()">Watch Ad</button>
+  </div>
+
+  <!-- DEPOSIT -->
+  <div class="page" id="deposit">
+    <h3>Select Deposit Amount</h3>
+    <div class="amounts">
+      <button onclick="selectAmount(500)">500</button>
+      <button onclick="selectAmount(1000)">1000</button>
+      <button onclick="selectAmount(2500)">2500</button>
+      <button onclick="selectAmount(5000)">5000</button>
+      <button onclick="selectAmount(10000)">10000</button>
+      <button onclick="selectAmount(20000)">20000</button>
+      <button onclick="selectAmount(50000)">50000</button>
+    </div>
+
+    <p class="note">
+      SEND MONEY TO EASYPAISA<br>
+      03362618250<br>
+      NAME: BILQEES AKHTAR
+    </p>
+
+    <label>Payment Screenshot</label>
+    <input type="file">
+    <input id="trx" placeholder="Enter TRX ID">
+    <button onclick="confirmDeposit()">Confirm Deposit</button>
+  </div>
+
+  <!-- REFERRAL -->
+  <div class="page" id="referral">
+    <h3>Coming Soon</h3>
+  </div>
+
+  <!-- WITHDRAW -->
+  <div class="page" id="withdraw">
+    <h3>Withdraw</h3>
+    <select>
+      <option>Easypaisa</option>
+      <option>JazzCash</option>
+    </select>
+    <input placeholder="Account Number">
+    <input placeholder="Account Name">
+    <input id="wAmount" placeholder="Withdraw Amount">
+    <button onclick="withdraw()">Withdraw</button>
+    <div id="withdrawResult"></div>
+  </div>
+
+  <!-- NAV -->
+  <div class="nav" id="nav">
+    <span onclick="openPage('home')">Home</span>
+    <span onclick="openPage('deposit')">Deposit</span>
+    <span onclick="openPage('referral')">Referral</span>
+    <span onclick="openPage('withdraw')">Withdraw</span>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
